@@ -1,0 +1,47 @@
+<!-- Brian Henson 1/24/2018 -->
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="edit_list.css"/>
+</head>
+
+<body>
+	<div class="outer-wrapper">
+		<!-- unsure how to format this text and make it look good... -->
+		<p>Any website with URL containing these patterns will be instantly killed, regardless of how it was opened.</p>
+		<p>Use * as an any-length wildcard. Use ? as a single-character wildcard.</p>
+		<div class="new-pattern">
+			<input type="text">
+			<button type="button" class="add">Add pattern</button>
+		</div>
+		
+		<hr>
+		<div>
+			<!-- insert error messages into this thing -->
+			<p class="errorparagraph"></p>
+		</div>
+		<hr>
+		
+		<table class="pattern-table">
+			<colgroup>
+				<col width="200px">
+				<col width="40px">
+				<col width="60px">
+			</colgroup>
+			<tr>
+				<th>Pattern</th>
+				<th># hits</th>
+			</tr>
+
+			<!-- insert existing entries in here -->
+		
+		</table>
+	</div>
+
+	<script type="application/javascript" src="../chrome-compat/browser-polyfill.js"></script>
+	<script type="application/javascript" src="edit_list.js"></script>
+</body>
+
+</html>

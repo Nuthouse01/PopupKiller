@@ -1,0 +1,41 @@
+PopupKiller addon for Firefox and Chrome
+Last updated 2/9/2018, current v1.2
+Brian Henson
+============================================================================
+v1.2
+	Added changelog file
+	Added metacharacter ? meaning any single character (exactly one)
+	Added options page!
+		temporary disable
+		explicit homepage/newtab protection
+		one button to add several suggested patterns
+		'clear all' button
+	Improved icon so its visible on darker themes
+	No longer requires * prefix/suffix, instead of matching whole URL it matches a substring
+		Automatically removes * prefix/suffix from existing entries on version update (one time only)
+	Improved the "page killed" log statement
+	Moved storage add/remove out of BG and into balloon and options menu
+	Big restructuring/functionalizing in BG script
+	NOTE: gave up on auto-detecting homepage/newtab... am able to reliably detect browser, but homepage 
+		and newtab are literally inaccessible in Chrome, and the only method available in Firefox prevents 
+		Chrome from loading the extension. Because I don't want keep one version that works on both
+		browsers I have to give up on this.
+	NOTE: in Chrome only, whenever options page or balloon send a message to the BG script, it works 
+		perfectly but throws an error in the console. Not sure how to prevent it, very annoying.
+
+
+v1.1
+	Added 'chrome-compat' folder, modified 'manifest.json', modified 'edit_list.html'
+	All this adds support for running the exact same extension on Chrome
+		Not actually published on Chrome store because I don't want to pay $5
+	All credit to the 'webextension polyfill' library: https://github.com/mozilla/webextension-polyfill
+
+
+v1.0
+	Basic functionality on Firefox
+	Pattern must match entire URL; therefore pattern-list requires * before and after as an any-length wildcard
+	Tracks # of hits on each pattern
+	When displaying list, sort alphabetically
+	Logging statements NOT removed
+
+

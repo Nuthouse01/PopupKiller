@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "PopupKiller",
+  "version": "1.2",
+
+  "description": "On page load, compares URL to a user-created list. Closes page/tab if there is a match.",
+  "homepage_url": "https://github.com",
+  "icons": {
+    "32": "icons/PKv4-32.png",
+    "48": "icons/PKv4-48.png",
+	"96": "icons/PKv4-96.png"
+  },
+
+  "permissions": [
+    "tabs", "activeTab", "storage"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/PKv4-32.png",
+    "default_title": "Edit Kill-List",
+    "default_popup": "popup/edit_list.html"
+  },
+
+  "background": {
+    "scripts": ["chrome-compat/browser-polyfill.js","background/popupkiller.js"]
+  },
+  
+  "options_ui": {
+    "page": "options/options.html"
+  }
+  
+}
+

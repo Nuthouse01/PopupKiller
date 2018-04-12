@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<style>
+		<!-- stuff -->
+		.pattern-text {
+		}
+		.explain-text {
+		}
+		.label-text {
+		}
+	</style>
+</head>
+
+<body>
+	<form>
+		<fieldset>
+			<legend>Stuff:</legend>
+			<label class="explain-text">Enable or disable popup killing without erasing your 
+			pattern list or history.</label><br>
+			<label for="enabledisable" class="label-text">Disable PopupKiller:</label>
+			<input type="checkbox" id="enabledisable" name="status" value="disable">
+			<br><br>
+			<label class="explain-text">If you have a custom homepage/newtab page, please enter it below to be 
+			protected (never accidentally killed). The default (empty URL) newtab and homepage on both Firefox 
+			and Chrome are already protected. 
+			<br>This follows the same pattern conventions as the kill-list: attempts to match substring anywhere 
+			in the URL, * is an any-length wildcard, and ? matches any character (exactly one).</label><br>
+			<table>
+				<colgroup>
+					<col width="100px">
+				</colgroup>
+				<tr>
+					<td><label for="homepage" class="label-text">Homepage:</label></td>
+					<td><input type="text" id="homepage" name="hp-pattern" class="pattern-text"></td>
+				</tr>
+				<tr>
+					<td><label for="newtab" class="label-text">Newtab:</label></td>
+					<td><input type="text" id="newtab" name="nt-pattern" class="pattern-text"></td>
+				</tr>
+			</table>
+			<br>
+			<button type="button" id="save">Save changes</button>
+		</fieldset>
+	</form>
+	<hr>
+	<div>
+		<p class="explain-text">Click this button to add several default/suggested patterns to the kill-list.</p>
+		<button type="button" id="loaddefault">Load defaults</button>
+		<label id="loadresponse" style="color:red;"></label>
+	</div>
+	<hr>
+	<div>
+		<p class="explain-text">Click this button to erase the entire contents and history of the kill-list. Cannot be undone!</p>
+		<button type="button" id="clearall">Clear all</button>
+		<!-- I want a confirmation popup... but how? -->
+		<label id="clearresponse" style="color:red;"></label>
+	</div>
+
+	<script type="application/javascript" src="../chrome-compat/browser-polyfill.js"></script>
+	<script type="application/javascript" src="options.js"></script>
+</body>
+
+</html>
+
